@@ -12,8 +12,8 @@ function App() {
 
     useEffect(() => {
         Promise.all([
-            fetch('http://jsonplaceholder.typicode.com/posts'),
-            fetch('http://jsonplaceholder.typicode.com/users'),
+            fetch('https://jsonplaceholder.typicode.com/posts'),
+            fetch('https://jsonplaceholder.typicode.com/users'),
         ]).then(async ([responsePosts, responseAuthors]) => {
             const posts = await responsePosts.json()
             const authors = await responseAuthors.json()
